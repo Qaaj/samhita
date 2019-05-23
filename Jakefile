@@ -9,10 +9,21 @@ jake.addListener('complete', function () {
 
 desc('Import Pubmed Sample Data.');
 task('pubmed_sample', { async: true }, async () => {
-  console.log('Running CC import.')
+  console.log('Running Pubmed Sample import.')
   const entries = await tasks.pubmed('sample/pubmedsample.xml');
   const sql = entries.map(helpers.getData('pubmed'))
   await knex('raw').insert(sql);
+});
+
+desc('Import Pubmed Data.');
+task('pubmed', { async: true }, async () => {
+  const time = new Date().getTime();
+  console.log('Running Pubmed import.', time)
+  const entries = await tasks.pubmed('sample/baseline/pubmed19n0001.xml');
+  const done = new Date().getTime();
+  console.log('Pasing Done in ' + Math.round((done-time) / 1000) + ' seconds.';
+  // const sql = entries.map(helpers.getData('pubmed'))
+  // await knex('raw').insert(sql);
 });
 
 desc('Deleta all data.');

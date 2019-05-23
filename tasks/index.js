@@ -6,7 +6,7 @@ const pubmed = (url) => new Promise((ok, nok) => {
   const stream = fs.createReadStream(url);
   var xml = new XmlStream(stream);
   xml.on('endElement: PubmedArticle', function(item) {
-    console.log(item.MedlineCitation.PMID['$text']);
+    // console.log(item.MedlineCitation.PMID['$text']);
     entries.push(item);
   });
   xml.on('error', function(message) {
