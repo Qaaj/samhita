@@ -59,7 +59,7 @@ const getData = (source) => (data) => {
   return ({
     source,
     data,
-    uuid: uuid(data.description + data.amount + data.tx_date, uuid.DNS)
+    uuid: uuid(data.MedlineCitation.PMID['$text'], uuid.DNS)
   })
 };
 

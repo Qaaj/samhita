@@ -10,7 +10,8 @@
     "moment": "^2.24.0",
     "numeral": "^2.0.6",
     "pg": "^7.4.3",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "xml-stream": "^0.4.5"
   },
   "devDependencies": {
     "babel-plugin-transform-async-generator-functions": "^6.24.1",

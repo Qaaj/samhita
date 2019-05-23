@@ -10,9 +10,9 @@ jake.addListener('complete', function () {
 desc('Import Pubmed Sample Data.');
 task('pubmed_sample', { async: true }, async () => {
   console.log('Running CC import.')
-  const entries = await tasks.pubmed('data/_2018-CC.csv');
-  const sql = entries.map(helpers.getData('CC'))
-  await knex('transactions_raw').insert(sql);
+  const entries = await tasks.pubmed('sample/pubmedsample.xml');
+  const sql = entries.map(helpers.getData('pubmed'))
+  await knex('raw').insert(sql);
 });
 
 desc('Deleta all data.');
