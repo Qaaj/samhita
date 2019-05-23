@@ -1,0 +1,6 @@
+- Create Database in PG called 'samhita'
+- Create ENV var PG_SAMHITA with PG connection string
+- `npm install`
+- `knex migrate:latest`
+- `jake pubmed_sample`
+- Done
