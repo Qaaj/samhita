@@ -5,7 +5,7 @@
   "author": "Jan Jorissen <grasmaaier45@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "knex": "^0.15.2",
+    "knex": "^2.4.0",
     "lodash": "^4.17.13",
     "moment": "^2.24.0",
     "numeral": "^2.0.6",
